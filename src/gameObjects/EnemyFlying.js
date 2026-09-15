@@ -40,7 +40,7 @@ class EnemyFlying extends Phaser.Physics.Arcade.Sprite {
 
         this.pathIndex += this.pathSpeed; // increment percentage moved by pathSpeed
 
-        if (this.pathIndex > 1) this.die();
+        if (this.pathIndex > 1) this.die(); // remove unit and free resources by killing it at the end of its path (which is intentionally off-screen to hide the death animation)
 
         // update firing interval
         if (this.fireCounter > 0) this.fireCounter--;
