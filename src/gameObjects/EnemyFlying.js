@@ -44,9 +44,7 @@ class EnemyFlying extends Phaser.Physics.Arcade.Sprite {
 
         // update firing interval
         if (this.fireCounter > 0) this.fireCounter--;
-        else {
-            this.fire();
-        }
+        else this.fire();
     }
 
     hit(damage) {
